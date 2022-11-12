@@ -24,5 +24,18 @@ function insertionSort(arr) {
     return arr;
 }
 
+function selectionSort (arr) {
+    for(let i=0; i<a.length - 1; i++) {
+        let minIndex = i;
+        for(let j=i+1; j<arr.length; j++) {
+            if(arr[minIndex] < arr[j]) {
+                minIndex = j
+            }
+            [arr[j], arr[minIndex]] = [arr[minIndex], arr[j]]
+        }
+    }
+    return arr;
+}
+
 let sortedArr = insertionSort(a);
 console.log(sortedArr)
